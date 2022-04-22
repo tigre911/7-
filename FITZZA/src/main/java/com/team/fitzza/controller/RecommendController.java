@@ -173,7 +173,7 @@ public class RecommendController {
 			service.BoardFileInsert(vo);
 			Mservice.expUp_board(user_id);
 			//레코드 추가 성공
-			String msg = "<script>alert('자료실에 글이 등록되었습니다');location.href='/board/recommend/recommendList';</script>";
+			String msg = "<script>alert('스타일 추천 글이 등록되었습니다');location.href='/board/recommend/recommendList';</script>";
 			entity = new ResponseEntity<String>(msg, headers, HttpStatus.OK);	//200
 			
 		}catch(Exception e) {
@@ -352,7 +352,7 @@ public class RecommendController {
 //				}			
 
 			// 글 내용보기로 이동
-			String msg = "<script>alert('오늘의 추천 글이 수정되었습니다.\\n글내용보기로 이동합니다');";
+			String msg = "<script>alert('스타일 추천 글이 수정되었습니다.\\n글내용보기로 이동합니다');";
 			msg += "location.href='/board/recommend/recommendView?board_num=" + vo.getBoard_num() + "';</script>";
 
 			entity = new ResponseEntity<String>(msg, headers, HttpStatus.OK);

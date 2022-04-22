@@ -14,6 +14,8 @@
 	#reportSearchFrm input {height:30px; font-size:16px}
 	a:link {color:#222; text-decoration: none;}
 	a:visited {color:#222 }
+	.modal-backdrop {margin:0}
+	.modal-dialog {margin-right:340px}
 </style>
 <!-- 카테고리 선택 js-->
  <script>

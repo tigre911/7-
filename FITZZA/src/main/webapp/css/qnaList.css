@@ -20,6 +20,7 @@ body{
     margin:20px 0 20px 1040px;
 }
 #q_write a {
+	text-decoration:none;
 	width:100px; height:50px; 
 	color:gray;
 	line-height:50px;
@@ -48,6 +49,7 @@ body{
      min-height:300px;
 }
 .qnalist > li a{
+	text-decoration:none;
 	color:black;
 }
 .qnalist > li {overflow:hidden}

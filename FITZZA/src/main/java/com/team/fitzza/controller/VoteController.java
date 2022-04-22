@@ -166,7 +166,7 @@ public class VoteController {
 			
 
 			//레코드 추가 성공
-			String msg = "<script>alert('자료실에 글이 등록되었습니다');location.href='/board/vote/voteList';</script>";
+			String msg = "<script>alert('투표게시판에 글이 등록되었습니다');location.href='/board/vote/voteList';</script>";
 			entity = new ResponseEntity<String>(msg, headers, HttpStatus.OK);	//200
 			
 		}catch(Exception e) {
@@ -305,7 +305,7 @@ public class VoteController {
 				service.BoardFileUpdate(vo);		
 				
 				// 글 내용보기로 이동
-				String msg = "<script>alert('자료실 글이 수정되었습니다.\\n글내용보기로 이동합니다');";
+				String msg = "<script>alert('투표게시글이 수정되었습니다.\\n글내용보기로 이동합니다');";
 				msg += "location.href='/board/vote/voteView?board_num="+vo.getBoard_num()+"';</script>";
 				
 				entity = new ResponseEntity<String>(msg, headers, HttpStatus.OK);

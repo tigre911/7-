@@ -16,7 +16,7 @@
   	</div>
 	<div id="review_container"><!--  리뷰 글 들어갈곳 -->
 		<ul id="reviewListUl"></ul>
-	  	<a id="moreViewReview"><img src="/img/더보기.png" style="width:100px;"></a>
+	  	<a id="moreViewReview"><img src="/img/더보기.png" style="width:100px; display:block;margin:0 auto;"></a>
 		<div>
 			<form method="get" action="/board/review/search" id="searchFrm">
 		    	<select name="searchKey">

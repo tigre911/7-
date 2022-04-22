@@ -30,7 +30,7 @@
 	margin-top:100px;
 	background-color:rgba(255,255,255,0.8)
 }
-#dropzone img {width:200px; height:100px}
+#dropzone img {width:200px; }
 #cb_img_wrap > img {
 	width:150px; height:150px; 
 	float:left;

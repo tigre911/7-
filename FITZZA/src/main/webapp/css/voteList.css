@@ -30,6 +30,7 @@ body{background:url(../img/tc_bg_1.png);}
 }
 
 #list-menu a {
+	text-decoration:none;
 	width:100px; 
 	height:50px; 
 	color:gray;

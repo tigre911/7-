@@ -162,7 +162,7 @@ public class QnaBoardController {
 			service.BoardFileInsert(vo);
 			Mservice.expUp_board(user_id);
 			// 레코드 추가 성공
-			String msg = "<script>alert('자료실에 글이 등록되었습니다');location.href='/board/qna/qnaList';</script>";
+			String msg = "<script>alert('Q&A에 글이 등록되었습니다');location.href='/board/qna/qnaList';</script>";
 			entity = new ResponseEntity<String>(msg, headers, HttpStatus.OK); // 200
 
 		} catch (Exception e) {

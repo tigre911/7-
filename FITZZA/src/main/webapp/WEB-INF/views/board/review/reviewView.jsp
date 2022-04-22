@@ -10,6 +10,7 @@
 #rnb #logStatus5 {
 	position:absolute; right: 280px; top: 28px;
 }
+a:link {text-decoration: none;}
 </style>
 <script>
 function delCheck(){

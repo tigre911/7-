@@ -78,7 +78,7 @@
         </article>
         <article id="style_reco" class="article">
 	        <div class="wrap">
-	        	<h1>다양한 패션을 나누고 싶다면</h1>
+	        	<h1 style="font-size:30px; line-height:80px">다양한 패션을 나누고 싶다면</h1>
 	        	<h2><a href="/board/recommend/recommendList">스타일 추천</a></h2>
 	        	<ul id="text_effect">
 	        		<li class="text">click the people !</li>
@@ -173,7 +173,7 @@
         <article id="codi_book" class="article">
         	<div class="wrap">
         		<h1>더 많은 코디 알아보러 가기</h1>
-	        	<h2><a href="">옷입히기</a></h2>
+	        	<h2><a href="/board/codibook/codibookList">옷입히기</a></h2>
         		<div  onmousedown='startDrag(event, this)'></div>
         		<p id="codi_img">
 	        		<img src="img/codi_book_img1.png" class="drag" alt="원피스1" style="position:absolute; left:50px; top:50px;" onmousedown='startDrag(event, this)'>

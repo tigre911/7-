@@ -42,7 +42,9 @@ $(document).ready(function(){
       });
 });
 </script>
-
+<style>
+a:link {text-decoration: none;}
+</style>
 <body>
 <div class="recboard">
     <br><br><br><br><br><br><br>
