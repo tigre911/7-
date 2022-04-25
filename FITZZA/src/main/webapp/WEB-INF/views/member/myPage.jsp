@@ -4,14 +4,14 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
 <style>
-*{font-family: 'Noto Sans KR'; font-size:20px;text-decoration: none; }
-a {font-size:20px}
-button a {font-size:16px}
-a:link {color:#fff; text-decoration: none;}
-a:visited {color:#fff}
-.admin_setting {margin-top:-10px}
-.my_list_title li {font-size:20px; font-weight:600;}
-#logStatus4 > img {vertical-align:top;}
+	*{font-family: 'Noto Sans KR'; font-size:20px;text-decoration: none; }
+	a {font-size:20px}
+	button a {font-size:16px}
+	a:link {color:#fff; text-decoration: none;}
+	a:visited {color:#fff}
+	.admin_setting {margin-top:-10px}
+	.my_list_title li {font-size:20px; font-weight:600;}
+	#logStatus4 > img {vertical-align:top;}
 	#logStatus5 > img {vertical-align:top;}
 	#logStatus3 > a > img {margin-top:-15px}
 </style>

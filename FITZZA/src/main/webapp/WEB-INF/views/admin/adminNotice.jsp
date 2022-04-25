@@ -5,6 +5,8 @@
 	#adminNotice_container {
 		display:none;height:100vh;
 		width:100vw;
+		background: url(/img/notice_image.png) no-repeat; 
+		background-size:80vw 100vh;
 	}
 	#adminNotice_container h1 {
 	font-size:30px;
@@ -18,10 +20,7 @@
 	margin-left:10%;
 	width:50%;
 }
-#notice_write_div{
-	background-image: url(/img/notice_image.png); 
-	background-size: 80%;
-}
+
 </style>
 <script>
 $(function(){

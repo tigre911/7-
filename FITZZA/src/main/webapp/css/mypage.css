@@ -269,14 +269,7 @@
 	transition:all 0.5s;
 }
 .my_list_alink:hover {background-color:rgba(0,0,0,0.1);}
-.modal-content {background-color:blue}
-.modal-content, .modal-header, .modal-body {
-	display:block;
-	width:600px; text-align:center;
-	background-color:white;
-}
-.modal-header h2 {font-size:40px}
-#changeModal, .modal-backdrop {margin-left:-340px;}
+
 label[for="upload_file"] {
 	width:80px; height:40px;
 	text-align:center; line-height:40px;

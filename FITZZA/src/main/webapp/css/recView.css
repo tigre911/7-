@@ -176,8 +176,8 @@ li{list-style-type: none;}
 }
 
 /* 모달 */
-.modal {font-size: 20px; text-align:center}
-.modal-content {
+#reportModal {font-size: 20px; text-align:center}
+#reportModal .modal-content {
 	display:block;
 	max-width:1000px; height: 650px;
 	position:absolute; left:50%; top:150px;

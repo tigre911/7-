@@ -1,7 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <link rel="stylesheet" href="/css/voteList.css" type="text/css">
-
+<style>
+	#logStatus4 > img {vertical-align:top;}
+	#logStatus5 > img {vertical-align:top;}
+	#logStatus3 > a > img {margin-top:-15px}
+</style>
 <div id="vote-wrapper">
 	 <div id="sub-title">
 		<h1>투표게시판</h1>
