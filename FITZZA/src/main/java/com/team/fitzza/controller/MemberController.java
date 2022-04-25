@@ -393,7 +393,7 @@ public class MemberController {
 	@PostMapping("/member/changeProfileImg")
 	public ResponseEntity<String> changeProfileImg(MemberVO vo, HttpSession session, HttpServletRequest req) {
 		vo.setUser_id((String)session.getAttribute("logId"));
-		String path = session.getServletContext().getRealPath("/upload");
+		String path = session.getServletContext().getRealPath("/upload/");
 			
 		ResponseEntity<String> entity = null;
 		HttpHeaders headers = new HttpHeaders();

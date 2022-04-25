@@ -97,7 +97,7 @@ public class RecommendController {
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(new MediaType("text","html", Charset.forName("UTF-8")));
 		
-		String path = request.getSession().getServletContext().getRealPath("/upload"); // 파일업로드를 위한 업로드 위치의 절대주소
+		String path = request.getSession().getServletContext().getRealPath("/upload/"); // 파일업로드를 위한 업로드 위치의 절대주소
 		System.out.println("path -> "+path);
 		try {
 			System.out.println("try문");
@@ -233,7 +233,7 @@ public class RecommendController {
 	public ResponseEntity<String> reviewEditOk(BoardVO vo, HttpSession session, HttpServletRequest req) {
 		System.out.println("recommendEditOk START!!!");
 		vo.setUser_id((String) session.getAttribute("logId"));
-		String path = session.getServletContext().getRealPath("/upload");
+		String path = session.getServletContext().getRealPath("/upload/");
 
 		ResponseEntity<String> entity = null;
 		HttpHeaders headers = new HttpHeaders();

@@ -48,3 +48,6 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+bootWar {
+	archiveName("FITZZA.war")
+}

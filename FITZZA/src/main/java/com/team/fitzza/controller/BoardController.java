@@ -55,7 +55,7 @@ public class BoardController {
 		
 		String user_id = (String)session.getAttribute("logId");
 		
-		String path = session.getServletContext().getRealPath("/upload");
+		String path = session.getServletContext().getRealPath("/upload/");
 		
 		int type_num = service.getType_num(board_num); //3
 		System.out.println(type_num);

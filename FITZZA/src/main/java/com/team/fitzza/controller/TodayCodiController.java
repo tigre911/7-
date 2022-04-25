@@ -60,7 +60,7 @@ public class TodayCodiController {
 			HttpHeaders headers = new HttpHeaders();
 			headers.setContentType(new MediaType("text","html", Charset.forName("UTF-8")));
 			
-			String path = request.getSession().getServletContext().getRealPath("/upload/todayCodi"); // 파일업로드를 위한 업로드 위치의 절대주소
+			String path = request.getSession().getServletContext().getRealPath("/upload/todayCodi/"); // 파일업로드를 위한 업로드 위치의 절대주소
 			System.out.println("path -> "+path);
 			try {
 				// 파일 업로드를 처리하기 위해서 request 객체에서 multipart객체를 구하여야 한다.
