@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`user` (
   `profile_image` VARCHAR(300) NULL,
   `permission` ENUM('user', 'admin') NOT NULL,
   `report_hit` INT NOT NULL DEFAULT 0,
-  PRIMARY KEY (`user_id`))
+  PRIMARY KEY (`user_id`));
 
 
 -- -----------------------------------------------------
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`user_leave` (
   `leave_date` DATETIME NOT NULL DEFAULT now(),
   `leave_forced` ENUM('Y', 'N') NOT NULL,
   `email` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`email`))
+  PRIMARY KEY (`email`));
 
 
 -- -----------------------------------------------------
@@ -47,8 +47,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`user_leave` (
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `semi_project`.`category_big` (
   `cat_big_name` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`cat_big_name`))
-
+  PRIMARY KEY (`cat_big_name`));
 
 -- -----------------------------------------------------
 -- Table `semi_project`.`category_small`
@@ -61,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`category_small` (
     FOREIGN KEY (`cat_big_name`)
     REFERENCES `semi_project`.`category_big` (`cat_big_name`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON UPDATE NO ACTION);
 
 
 -- -----------------------------------------------------
@@ -70,7 +69,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`category_small` (
 CREATE TABLE IF NOT EXISTS `semi_project`.`gender` (
   `gender_type` ENUM('W', 'M', 'U') NOT NULL,
   `gender_name` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`gender_type`))
+  PRIMARY KEY (`gender_type`));
 
 
 -- -----------------------------------------------------
@@ -95,7 +94,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`product` (
     FOREIGN KEY (`gender_type`)
     REFERENCES `semi_project`.`gender` (`gender_type`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON UPDATE NO ACTION);
 
 
 -- -----------------------------------------------------
@@ -104,7 +103,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`product` (
 CREATE TABLE IF NOT EXISTS `semi_project`.`board_type` (
   `type_num` INT NOT NULL AUTO_INCREMENT,
   `type_name` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`type_num`))
+  PRIMARY KEY (`type_num`));
 
 
 -- -----------------------------------------------------
@@ -135,7 +134,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`board` (
     FOREIGN KEY (`gender_type`)
     REFERENCES `semi_project`.`gender` (`gender_type`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON UPDATE NO ACTION);
 
 
 -- -----------------------------------------------------
@@ -149,7 +148,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`prod_link` (
     FOREIGN KEY (`prod_num`)
     REFERENCES `semi_project`.`product` (`prod_num`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON UPDATE NO ACTION);
 
 
 -- -----------------------------------------------------
@@ -166,7 +165,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`codi` (
     FOREIGN KEY (`user_id`)
     REFERENCES `semi_project`.`user` (`user_id`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE CASCADE);
 
 
 -- -----------------------------------------------------
@@ -184,7 +183,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`codi_component` (
     FOREIGN KEY (`prod_num`)
     REFERENCES `semi_project`.`product` (`prod_num`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON UPDATE NO ACTION);
 
 
 -- -----------------------------------------------------
@@ -203,7 +202,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`like_clicker` (
     FOREIGN KEY (`board_num`)
     REFERENCES `semi_project`.`board` (`board_num`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE CASCADE);
 
 
 -- -----------------------------------------------------
@@ -212,7 +211,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`like_clicker` (
 CREATE TABLE IF NOT EXISTS `semi_project`.`trade_state` (
   `state_num` INT NOT NULL AUTO_INCREMENT,
   `state_name` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`state_num`))
+  PRIMARY KEY (`state_num`));
 
 
 -- -----------------------------------------------------
@@ -227,7 +226,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`trade_detail` (
     FOREIGN KEY (`board_num`)
     REFERENCES `semi_project`.`board` (`board_num`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE CASCADE);
 
 
 -- -----------------------------------------------------
@@ -249,7 +248,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`reply` (
     FOREIGN KEY (`user_id`)
     REFERENCES `semi_project`.`user` (`user_id`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE CASCADE);
 
 
 -- -----------------------------------------------------
@@ -265,7 +264,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`board_old` (
     FOREIGN KEY (`board_num`)
     REFERENCES `semi_project`.`board` (`board_num`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE CASCADE);
 
 
 -- -----------------------------------------------------
@@ -286,7 +285,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`board_qna` (
     FOREIGN KEY (`user_id`)
     REFERENCES `semi_project`.`user` (`user_id`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE CASCADE);
 
 
 -- -----------------------------------------------------
@@ -304,7 +303,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`board_common_image` (
     FOREIGN KEY (`board_num`)
     REFERENCES `semi_project`.`board` (`board_num`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE CASCADE);
 
 
 -- -----------------------------------------------------
@@ -322,7 +321,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`board_recommend` (
     FOREIGN KEY (`user_id`)
     REFERENCES `semi_project`.`user` (`user_id`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE CASCADE);
 
 
 -- -----------------------------------------------------
@@ -334,7 +333,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`board_notice` (
   `content` LONGTEXT NOT NULL,
   `notice_date` DATETIME NOT NULL DEFAULT now(),
   `hit` INT NOT NULL DEFAULT 0,
-  PRIMARY KEY (`notice_num`))
+  PRIMARY KEY (`notice_num`));
 
 
 -- -----------------------------------------------------
@@ -344,7 +343,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`user_grade` (
   `grade` INT NOT NULL,
   `exp_min` INT NOT NULL,
   `exp_max` INT NOT NULL,
-  `frame_img` VARCHAR(300) NOT NULL)
+  `frame_img` VARCHAR(300) NOT NULL);
 
 
 -- -----------------------------------------------------
@@ -364,7 +363,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`voted_user` (
     FOREIGN KEY (`board_num`)
     REFERENCES `semi_project`.`board` (`board_num`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON UPDATE NO ACTION);
 
 
 -- -----------------------------------------------------
@@ -377,7 +376,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`prod_tag` (
     FOREIGN KEY (`prod_num`)
     REFERENCES `semi_project`.`product` (`prod_num`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON UPDATE NO ACTION);
 
 
 -- -----------------------------------------------------
@@ -386,7 +385,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`prod_tag` (
 CREATE TABLE IF NOT EXISTS `semi_project`.`report_category` (
   `category_num` INT NOT NULL AUTO_INCREMENT,
   `category_name` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`category_num`))
+  PRIMARY KEY (`category_num`));
 
 
 -- -----------------------------------------------------
@@ -415,7 +414,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`board_report` (
     FOREIGN KEY (`user_id`)
     REFERENCES `semi_project`.`user` (`user_id`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE CASCADE);
 
 
 -- -----------------------------------------------------
@@ -435,7 +434,7 @@ CREATE TABLE IF NOT EXISTS `semi_project`.`alarm` (
     FOREIGN KEY (`board_num`)
     REFERENCES `semi_project`.`board` (`board_num`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE CASCADE);
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
